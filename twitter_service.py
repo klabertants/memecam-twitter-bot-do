@@ -86,11 +86,6 @@ def create_and_upload_meme(tweet_id, img_url, caption):
     return media.media_id
 
 
-class MyStream(pytwitter.StreamApi):
-    def on_tweet(self, tweet):
-        print(tweet)
-
-
 def run_main_loop():
     memecam_id = client.get_me().data.id
 
