@@ -115,7 +115,7 @@ def run_main_loop():
 
             client.create_tweet(
                 text="Nothing personal",
-                in_reply_to_tweet_id=tweet.id,
+                in_reply_to_tweet_id=tweet.data['conversation_id'],
                 media_ids=[create_and_upload_meme(tweet.id, thread_starter_profile_picture_url, caption)]
             )
         else:
